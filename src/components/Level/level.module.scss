@@ -1,0 +1,42 @@
+.exp-bar {
+	width: 100%;
+	height: 10px;
+	background-color: var(--spec);
+
+	.exp-thumb {
+		height: 100%;
+		background-color: var(--violet);
+		box-shadow: 0 0 10px var(--violet);
+	}
+}
+
+.wrapper {
+	height: 40px;
+	padding: 0 10px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.level {
+	span {
+		color: var(--accent);
+	}
+}
+
+.progress {
+	i {
+		font-style: normal;
+		color: var(--accent);
+	}
+
+	span {
+		color: var(--add);
+	}
+
+	img {
+		width: 25px;
+		margin-left: 5px;
+	}
+}

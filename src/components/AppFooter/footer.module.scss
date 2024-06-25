@@ -1,0 +1,20 @@
+.footer {
+	background-color: var(--add);
+	padding: 10px 25px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.label {
+	font-family: var(--csn-font);
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+.timer {
+	span {
+		color: var(--accent);
+	}
+}

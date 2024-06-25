@@ -1,0 +1,73 @@
+.clicker {
+	padding: 5px 0 20px;
+	height: calc(100vh - 410px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.label {
+	text-align: center;
+	font-family: var(--csn-font);
+	font-size: 16px;
+
+	span {
+		color: var(--accent);
+	}
+}
+
+/* Target Name */
+.name {
+}
+
+.target-name {
+	font-family: var(--csn-font);
+	letter-spacing: 1.5px;
+}
+
+/* Target Image */
+.image {
+	height: 200px;
+	width: 200px;
+	border: 3px solid var(--accent);
+	border-radius: 50%;
+	padding: auto;
+
+	background-image: url("./City.jpg");
+	background-size: cover;
+	background-position: center center;
+	backdrop-filter: grayscale(20%);
+	filter: grayscale(35%);
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	img {
+		width: 85%;
+		height: 85%;
+		filter: grayscale(-35%);
+	}
+}
+
+/* Target Health */
+.health {
+	width: 100%;
+}
+
+.health-bar {
+	width: 80%;
+	height: 12.5px;
+	background-color: var(--spec);
+	margin: 5px auto 0;
+	border-radius: 8px;
+
+	.health-thumb {
+		width: 50%;
+		height: 100%;
+		background-color: var(--accent);
+		border-radius: 8px;
+		box-shadow: 0 0 10px var(--accent);
+	}
+}

@@ -1,0 +1,22 @@
+.upgrades {
+	padding: 25px 20px;
+	background: linear-gradient(var(--add) 92%, var(--accent));
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+
+	border-bottom: 3px solid var(--accent);
+}
+
+.button {
+	width: 100%;
+	background-color: var(--accent);
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 5px 20px;
+	box-shadow: 0 0 10px var(--accent);
+	transition: opacity 0.2s;
+
+	&:active {
+		opacity: 0.6;
+	}
+}

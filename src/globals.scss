@@ -1,0 +1,50 @@
+/* - Preparing for styling - */
+
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Poppins:wght@400;500;700&display=swap");
+
+/* Reset base styles */
+@import url("./_reset.scss");
+
+/* Variables*/
+:root {
+	--main: #11151c;
+	--add: #212d40;
+	--accent: #6eacf6;
+	--light: #fafafa;
+	--violet: #8042bf;
+	--spec: #192333;
+
+	--pop-font: "Poppins", sans-serif;
+	--csn-font: "Cousine", monospace;
+}
+
+/* - Styling - */
+html {
+	scroll-behavior: smooth;
+	font-size: 18px;
+	font-family: var(--pop-font);
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: var(--main);
+	color: var(--light);
+}
+
+.main {
+	min-height: calc(100vh - 80px - 70px);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	hr {
+		border: none;
+		border-bottom: 1px solid var(--add);
+		width: 340px;
+		margin: 0 auto;
+	}
+}
