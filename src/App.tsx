@@ -4,6 +4,7 @@ import Clicker from "./components/Clicker"
 import Level from "./components/Level"
 import Resources from "./components/Resources"
 import Upgrades from "./components/Upgrades"
+import UpgradesModal from "./components/UpgradesModal"
 
 function App() {
 	return (
@@ -25,6 +26,8 @@ function App() {
 
 				<Upgrades />
 			</main>
+
+			<UpgradesModal />
 
 			<Footer />
 		</>

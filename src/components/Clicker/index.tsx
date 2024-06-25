@@ -15,7 +15,7 @@ export default function Clicker({ target, health, image }: IProps) {
 	const [realHP, setRealHP] = useState<number>(fullHP)
 	const [isLight, setIsLight] = useState<boolean>(false)
 
-	const setShoot = async (): Promise<void> => {
+	const setShoot = (): void => {
 		setIsLight(true)
 		setTimeout(() => {
 			setIsLight(false)

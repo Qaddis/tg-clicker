@@ -1,0 +1,55 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+
+	width: 100%;
+	height: 100%;
+	background: rgba($color: #000, $alpha: 0.6);
+
+	display: flex;
+	align-items: flex-end;
+}
+
+.modal {
+	width: 100%;
+	height: 75%;
+	padding: 25px 20px;
+	background-color: var(--main);
+	border-top: 3px solid var(--accent);
+	border-top-left-radius: 35px;
+	border-top-right-radius: 35px;
+	box-shadow: 0 0 20px 1px var(--accent);
+}
+
+.heading {
+	font-family: var(--csn-font);
+	font-size: 1.35rem;
+	text-align: center;
+	margin-bottom: 25px;
+	font-weight: bold;
+}
+
+.close-btn {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	background-color: var(--accent);
+	font-size: 1.5em;
+	padding: 0 11px;
+	border-radius: 50%;
+	filter: drop-shadow(0 0 10px var(--accent));
+	transition: translate 0.2s;
+
+	&:active {
+		translate: 0 3px;
+	}
+}
+
+.upgrades {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+}
