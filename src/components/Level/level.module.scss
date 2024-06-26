@@ -26,12 +26,12 @@
 }
 
 .progress {
-	i {
-		font-style: normal;
+	span {
 		color: var(--accent);
 	}
 
-	span {
+	i {
+		font-style: normal;
 		color: var(--add);
 	}
 

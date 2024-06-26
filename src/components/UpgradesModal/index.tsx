@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { upgrades as upg } from "../../data"
-import { useActions, useAppSelector } from "../../redux/hooks"
+import { useActions } from "../../hooks/useActions"
+import { useAppSelector } from "../../redux/hooks"
 import Card from "../UpgradeCard"
 import styles from "./modal.module.scss"
 

@@ -13,7 +13,7 @@ export default function Level() {
 				</h2>
 
 				<h2 className={styles.progress}>
-					20<i>k</i> <span>/</span> 30<i>k</i>
+					20<span>k</span> <i>/</i> 30<span>k</span>
 					<img src="./Soldier.png" alt="Power" />
 				</h2>
 			</div>

@@ -1,4 +1,4 @@
-import { useActions } from "../../redux/hooks"
+import { useActions } from "../../hooks/useActions"
 import styles from "./upgrades.module.scss"
 
 export default function Upgrades() {
