@@ -26,6 +26,10 @@
 }
 
 .progress {
+	p {
+		display: inline;
+	}
+
 	span {
 		color: var(--accent);
 	}

@@ -2,6 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 
 export interface IUserState {
 	name: string
+	avatar: string
 	force: number
 	power: number
 	armyLevel: number
@@ -12,6 +13,7 @@ export interface IUserState {
 
 const initialState: IUserState = {
 	name: "Qaddis",
+	avatar: "./avatar.png",
 	force: 245,
 	power: 20000,
 	armyLevel: 5,
