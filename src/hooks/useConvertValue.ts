@@ -3,9 +3,9 @@ export const useConvertValue = (value: number): string => {
 	let finalValue: string
 
 	if (valueLen >= 4 && valueLen < 7) {
-		finalValue = `${value / 1000}<span>k</span>`
+		finalValue = `${Math.floor(value * 10) / 10000}<span>k</span>`
 	} else if (valueLen >= 7 && valueLen < 10) {
-		finalValue = `${value / 1000000}<span>m</span>`
+		finalValue = `${Math.floor(value * 10) / 10000000}<span>m</span>`
 	} else {
 		finalValue = value.toString()
 	}

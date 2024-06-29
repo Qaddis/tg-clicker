@@ -6,7 +6,25 @@ import Resources from "./components/Resources"
 import Upgrades from "./components/Upgrades"
 import UpgradesModal from "./components/UpgradesModal"
 
+import { useEffect, useState } from "react"
+
+import type { IEnemies } from "./data"
+import { enemies } from "./data"
+
 function App() {
+	const [enemy, setEnemy] = useState<IEnemies>()
+
+	const enemyKilled = (): void => {
+		const newEnemy: IEnemies =
+			enemies[Math.floor(Math.random() * enemies.length)]
+
+		setEnemy(newEnemy)
+	}
+
+	useEffect(() => {
+		enemyKilled()
+	})
+
 	return (
 		<>
 			<Header />
@@ -18,9 +36,10 @@ function App() {
 					<Resources />
 
 					<Clicker
-						target="Stormtrooper"
-						image="./Default_1.png"
-						health={2400}
+						target={enemy ? enemy.name : "Loading..."}
+						image={enemy ? enemy.image : "Loading..."}
+						health={enemy ? enemy.health * 2000 : 1}
+						enemyKilled={enemyKilled}
 					/>
 				</div>
 

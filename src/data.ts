@@ -1,9 +1,15 @@
-interface IUpgrades {
+export interface IUpgrades {
 	title: string
 	description: string
 	icon: string
 	cost: number
 	level: number
+}
+
+export interface IEnemies {
+	name: string
+	image: string
+	health: number
 }
 
 export const upgrades: IUpgrades[] = [
@@ -27,5 +33,23 @@ export const upgrades: IUpgrades[] = [
 		cost: 10200,
 		icon: "",
 		level: 8
+	}
+]
+
+export const enemies: IEnemies[] = [
+	{
+		name: "Stormtrooper",
+		image: "./Default_1.png",
+		health: 1
+	},
+	{
+		name: "Sniper",
+		image: "./Default_2.png",
+		health: 0.5
+	},
+	{
+		name: "Juggernaut",
+		image: "./Default_3.png",
+		health: 1.5
 	}
 ]
