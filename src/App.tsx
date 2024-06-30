@@ -7,9 +7,7 @@ import Upgrades from "./components/Upgrades"
 import UpgradesModal from "./components/UpgradesModal"
 
 import { useEffect, useState } from "react"
-
-import type { IEnemies } from "./data"
-import { enemies } from "./data"
+import { enemies, type IEnemies } from "./data"
 
 function App() {
 	const [enemy, setEnemy] = useState<IEnemies>()
@@ -38,7 +36,7 @@ function App() {
 					<Clicker
 						target={enemy ? enemy.name : "Loading..."}
 						image={enemy ? enemy.image : "Loading..."}
-						health={enemy ? enemy.health * 2000 : 1}
+						health={enemy ? enemy.health * 3000 : 1}
 						enemyKilled={enemyKilled}
 					/>
 				</div>

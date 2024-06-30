@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
+import { useAppSelector } from "../../redux/hooks"
 import styles from "./clicker.module.scss"
 
 interface IProps {
@@ -15,6 +16,8 @@ export default function Clicker({
 	image,
 	enemyKilled
 }: IProps) {
+	const user = useAppSelector(state => state.user)
+
 	const [realHP, setRealHP] = useState<number>(health)
 	const [isLight, setIsLight] = useState<boolean>(false)
 
@@ -26,20 +29,20 @@ export default function Clicker({
 	}
 
 	const handleClick = (): void => {
+		setRealHP(prevHP => prevHP - user.force)
 		setShoot()
-		setRealHP(realHP - 235)
-
-		setTimeout(() => {
-			if (realHP <= 0) {
-				enemyKilled()
-				setRealHP(health)
-			}
-		}, 10)
 	}
 
 	useEffect(() => {
+		if (realHP <= 0) {
+			setRealHP(prevHP => prevHP - user.force)
+			enemyKilled()
+		}
+	}, [realHP, enemyKilled, user.force])
+
+	useEffect(() => {
 		setRealHP(health)
-	}, [setRealHP, health])
+	}, [health])
 
 	return (
 		<section className={styles.clicker}>
@@ -64,7 +67,7 @@ export default function Clicker({
 
 			<div className={styles.health}>
 				<h2 className={styles.label}>
-					Target <span>Health</span>:
+					Target <span>Health</span>: {realHP <= 0 ? <i>0</i> : realHP}
 				</h2>
 
 				<div className={styles["health-bar"]}>
