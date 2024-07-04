@@ -16,6 +16,8 @@ export default function Clicker({
 	image,
 	enemyKilled
 }: IProps) {
+	const isHPShow = useAppSelector(state => state.settings.hpInNumbers)
+
 	const user = useAppSelector(state => state.user)
 
 	const [realHP, setRealHP] = useState<number>(health)
@@ -67,7 +69,8 @@ export default function Clicker({
 
 			<div className={styles.health}>
 				<h2 className={styles.label}>
-					Target <span>Health</span>: {realHP <= 0 ? <i>0</i> : realHP}
+					Target <span>Health</span>:{" "}
+					{isHPShow && (realHP <= 0 ? <i>0</i> : realHP)}
 				</h2>
 
 				<div className={styles["health-bar"]}>

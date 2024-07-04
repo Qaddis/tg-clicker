@@ -7,6 +7,7 @@ import Upgrades from "./components/Upgrades"
 import UpgradesModal from "./components/UpgradesModal"
 
 import { useEffect, useState } from "react"
+import Settings from "./components/SettingsModal"
 import { enemies, type IEnemies } from "./data"
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
 
 				<Upgrades />
 			</main>
+
+			<Settings />
 
 			<UpgradesModal />
 

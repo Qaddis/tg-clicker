@@ -1,19 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
 export interface IModalState {
-	isShow: boolean
+	upgrades: boolean
+	settings: boolean
 }
 
 const initialState: IModalState = {
-	isShow: false
+	settings: false,
+	upgrades: false
 }
 
 const modalSlice = createSlice({
 	name: "modal",
 	initialState,
 	reducers: {
-		toggleModal: state => {
-			state.isShow = !state.isShow
+		toggleModal: (state, actions: PayloadAction<keyof IModalState>) => {
+			if (actions.payload === "upgrades") {
+				state.upgrades = !state.upgrades
+			} else {
+				state.settings = !state.settings
+			}
 		}
 	}
 })

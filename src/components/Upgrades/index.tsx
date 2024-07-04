@@ -6,7 +6,7 @@ export default function Upgrades() {
 
 	return (
 		<section className={styles.upgrades}>
-			<button onClick={() => toggleModal()} className={styles.button}>
+			<button onClick={() => toggleModal("upgrades")} className={styles.button}>
 				Upgrades
 			</button>
 		</section>

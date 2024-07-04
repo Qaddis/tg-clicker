@@ -3,11 +3,13 @@ import { useMemo } from "react"
 import { useAppDispatch } from "../redux/hooks"
 
 import { actions as modalActions } from "../redux/modal/modalSlice"
+import { actions as settingsActions } from "../redux/settings/settingsSlice"
 import { actions as userActions } from "../redux/user/userSlice"
 
 const combineActions = {
 	...userActions,
-	...modalActions
+	...modalActions,
+	...settingsActions
 }
 
 export const useActions = () => {

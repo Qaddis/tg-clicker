@@ -6,7 +6,7 @@ import Card from "../UpgradeCard"
 import styles from "./modal.module.scss"
 
 export default function UpgradesModal() {
-	const isShow = useAppSelector(state => state.modal.isShow)
+	const isShow = useAppSelector(state => state.modal.upgrades)
 	const { toggleModal } = useActions()
 
 	return (
@@ -22,7 +22,7 @@ export default function UpgradesModal() {
 					initial="hide"
 					animate="show"
 					exit="hide"
-					onClick={() => toggleModal()}
+					onClick={() => toggleModal("upgrades")}
 				>
 					<motion.section
 						className={styles.modal}
@@ -36,7 +36,7 @@ export default function UpgradesModal() {
 						<h2 className={styles.heading}>Upgrades</h2>
 
 						<button
-							onClick={() => toggleModal()}
+							onClick={() => toggleModal("upgrades")}
 							className={styles["close-btn"]}
 						>
 							×
